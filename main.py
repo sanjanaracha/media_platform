@@ -56,7 +56,7 @@ def login_fun():
             st.rerun()
 
 
-if st.session_state.user==None:
+if st.session_state.users==None:
     login,signup=st.tabs(
         ["Login","SignUp"]
     )
