@@ -3,8 +3,8 @@ from d_base import conn_obj,cursor_obj
 
 st.title("Media Platform")
 
-# if "user" not in st.session_state:
-#     st.session_state.user=None
+if "user" not in st.session_state:
+    st.session_state.user = None
 
 
 def dashboard():
@@ -20,6 +20,14 @@ def dashboard():
             st.write(choosedfile.name)
             st.write(choosedfile.type)
         
+
+        if "image" in choosedfile.type:
+            st.image(choosedfile)
+        elif "video" in choosedfile.type:
+            st.video(choosedfile)
+        elif "audio" in choosedfile.type:
+            st.audio(choosedfile)  
+
     
 
 
@@ -56,8 +64,8 @@ def login_fun():
             st.rerun()
 
 
-if st.session_state.user==None:
-    login,signup=st.tabs(
+if st.session_state.user == None:
+    login,signup = st.tabs(
         ["Login","SignUp"]
     )
     with signup:
