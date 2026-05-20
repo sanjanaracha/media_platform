@@ -1,5 +1,5 @@
 import streamlit as st
-from d_base import conn_obj,cursor_obj
+# from d_base import conn_obj,cursor_obj
 
 st.title("Media Platform")
 
