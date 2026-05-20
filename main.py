@@ -3,7 +3,7 @@ import streamlit as st
 
 st.title("Media Platform")
 
-st.session_state.setdefault("user", None)
+# st.session_state.setdefault("user", None)
 
 
 def dashboard():
