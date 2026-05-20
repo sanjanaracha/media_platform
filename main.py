@@ -3,8 +3,7 @@ from d_base import conn_obj,cursor_obj
 
 st.title("Media Platform")
 
-if "user" not in st.session_state:
-    st.session_state.user = None
+st.session_state.setdefault("user", None)
 
 
 def dashboard():
